@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist - Sala Cingapura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Checklist - Sala Cingapura</h1>
+        <p>Verifique os itens e preencha os campos necessários.</p>
+    </header>
+
+    <section class="checklist">
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- Televisor -->
+            <div class="item">
+                <label class="equipamento" for="televisor">Televisor Samsung integra, emite imagens e sons?</label>
+                
+                <div class="radio-group">
+                    <input type="radio" id="televisor-sim" name="equipamento-televisor" value="sim"> Sim
+                    <input type="radio" id="televisor-nao" name="equipamento-televisor" value="nao" onchange="toggleMotivo('televisor')"> Não
+                </div>
+
+                <label for="foto-televisor">Foto aplicável?</label>
+                <input type="checkbox" id="foto-televisor" name="foto-televisor">
+
+                <div class="campo-foto">
+                    <label for="foto-televisor-upload">Anexar Foto:</label>
+                    <input type="file" id="foto-televisor-upload" name="foto-televisor-upload" accept="image/*">
+                </div>
+
+                <div class="campo-motivo" id="motivo-televisor" style="display: none;">
+                    <label for="motivo-televisor-input">Motivo para não (se aplicável):</label>
+                    <input type="text" id="motivo-televisor-input" name="motivo-televisor" placeholder="Explique o motivo">
+                </div>
+            </div>
+
+            <!-- Telefone Cisco -->
+            <div class="item">
+                <label class="equipamento" for="telefone">Telefone Cisco recebe e faz ligações?</label>
+
+                <div class="radio-group">
+                    <input type="radio" id="telefone-sim" name="equipamento-telefone" value="sim"> Sim
+                    <input type="radio" id="telefone-nao" name="equipamento-telefone" value="nao" onchange="toggleMotivo('telefone')"> Não
+                </div>
+
+                <label for="foto-telefone">Foto aplicável?</label>
+                <input type="checkbox" id="foto-telefone" name="foto-telefone">
+
+                <div class="campo-foto">
+                    <label for="foto-telefone-upload">Anexar Foto:</label>
+                    <input type="file" id="foto-telefone-upload" name="foto-telefone-upload" accept="image/*">
+                </div>
+
+                <div class="campo-motivo" id="motivo-telefone" style="display: none;">
+                    <label for="motivo-telefone-input">Motivo para não (se aplicável):</label>
+                    <input type="text" id="motivo-telefone-input" name="motivo-telefone" placeholder="Explique o motivo">
+                </div>
+            </div>
+
+            <!-- Periféricos -->
+            <div class="item">
+                <label class="equipamento" for="perifericos">Periféricos estão em funcionamento?</label>
+
+                <div class="radio-group">
+                    <input type="radio" id="perifericos-sim" name="equipamento-perifericos" value="sim"> Sim
+                    <input type="radio" id="perifericos-nao" name="equipamento-perifericos" value="nao" onchange="toggleMotivo('perifericos')"> Não
+                </div>
+
+                <label for="foto-perifericos">Foto aplicável?</label>
+                <input type="checkbox" id="foto-perifericos" name="foto-perifericos">
+
+                <div class="campo-foto">
+                    <label for="foto-perifericos-upload">Anexar Foto:</label>
+                    <input type="file" id="foto-perifericos-upload" name="foto-perifericos-upload" accept="image/*">
+                </div>
+
+                <div class="campo-motivo" id="motivo-perifericos" style="display: none;">
+                    <label for="motivo-perifericos-input">Motivo para não (se aplicável):</label>
+                    <input type="text" id="motivo-perifericos-input" name="motivo-perifericos" placeholder="Explique o motivo">
+                </div>
+            </div>
+
+            <!-- Cable Cubby -->
+            <div class="item">
+                <label class="equipamento" for="cable-cubby">Cable Cubby está em estado de conservação?</label>
+
+                <div class="radio-group">
+                    <input type="radio" id="cable-cubby-sim" name="equipamento-cable-cubby" value="sim"> Sim
+                    <input type="radio" id="cable-cubby-nao" name="equipamento-cable-cubby" value="nao" onchange="toggleMotivo('cable-cubby')"> Não
+                </div>
+
+                <label for="foto-cable-cubby">Foto aplicável?</label>
+                <input type="checkbox" id="foto-cable-cubby" name="foto-cable-cubby">
+
+                <div class="campo-foto">
+                    <label for="foto-cable-cubby-upload">Anexar Foto:</label>
+                    <input type="file" id="foto-cable-cubby-upload" name="foto-cable-cubby-upload" accept="image/*">
+                </div>
+
+                <div class="campo-motivo" id="motivo-cable-cubby" style="display: none;">
+                    <label for="motivo-cable-cubby-input">Motivo para não (se aplicável):</label>
+                    <input type="text" id="motivo-cable-cubby-input" name="motivo-cable-cubby" placeholder="Explique o motivo">
+                </div>
+            </div>
+
+            <!-- Painel de Agendamento AMX -->
+            <div class="item">
+                <label class="equipamento" for="painel-agendamento">Painel de agendamento AMX está em funcionamento?</label>
+
+                <div class="radio-group">
+                    <input type="radio" id="painel-agendamento-sim" name="equipamento-painel-agendamento" value="sim"> Sim
+                    <input type="radio" id="painel-agendamento-nao" name="equipamento-painel-agendamento" value="nao" onchange="toggleMotivo('painel-agendamento')"> Não
+                </div>
+
+                <label for="foto-painel-agendamento">Foto aplicável?</label>
+                <input type="checkbox" id="foto-painel-agendamento" name="foto-painel-agendamento">
+
+                <div class="campo-foto">
+                    <label for="foto-painel-agendamento-upload">Anexar Foto:</label>
+                    <input type="file" id="foto-painel-agendamento-upload" name="foto-painel-agendamento-upload" accept="image/*">
+                </div>
+
+                <div class="campo-motivo" id="motivo-painel-agendamento" style="display: none;">
+                    <label for="motivo-painel-agendamento-input">Motivo para não (se aplicável):</label>
+                    <input type="text" id="motivo-painel-agendamento-input" name="motivo-painel-agendamento" placeholder="Explique o motivo">
+                </div>
+            </div>
+
+            <button type="submit">Enviar Checklist</button>
+        </form>
+    </section>
+
+    <script>
+        // Função para exibir o campo "Motivo" quando a opção "Não" for selecionada
+        function toggleMotivo(id) {
+            var radioNao = document.getElementById(id + '-nao');
+            var motivoDiv = document.getElementById('motivo-' + id);
+
+            if (radioNao.checked) {
+                motivoDiv.style.display = "block";
+            } else {
+                motivoDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
